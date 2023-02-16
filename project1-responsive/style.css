@@ -276,6 +276,13 @@ input:checked + .slider:before {
 .mm-content-wrapper__text:nth-child(odd) {
     padding-right: 40px;
 }
+.mm-content-wrapper__image {    
+    display: flex;
+}
+.mm-content-wrapper__image img {    
+    width: auto;
+    height: auto;
+}
 
 /* 3D SECTION */
 
@@ -317,20 +324,31 @@ input:checked + .slider:before {
 /* VIDEO SECTION */
 
 .mm-setion-video {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 992px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mm-setion-video__video {
     width: 100%;
-    text-align: center;
-} 
-
-/* .mm-setion-video__video {
-
-} 
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
 
 .mm-setion-video__video iframe {
-   
-} */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    border-radius: 12px;
+}
 
 /* APP SECTION */
 .mm-aplication-container {
@@ -550,21 +568,25 @@ input:checked + .slider:before {
     .LogoImage {
         width: calc(50%);
     }
+
 }
 
 @media screen and (min-width: 768px) {
  /* HERO SECTION */
 
-.mm-hero {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    .mm-hero {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    
 
 }
+
 @media screen and (min-width: 992px) {
     .mm-navbar {
         padding-left: 10px;
@@ -693,12 +715,16 @@ input:checked + .slider:before {
         text-align: center;
         padding: 0;
     }
-
-    /* .mm-content-wrapper__image {    
-        margin: 0px auto;
-        width: auto;
-        height: auto;
-    } */
+    
+    .mm-content-wrapper__image {    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mm-content-wrapper__image img {    
+        width: 80%;
+        height: 80%;
+    }
 
     /* 3D SECTION */
 
@@ -772,4 +798,5 @@ input:checked + .slider:before {
     }
 
 }
+
 
