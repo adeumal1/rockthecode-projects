@@ -366,7 +366,7 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
 }
 
 .mm-developers__anchor {
@@ -381,6 +381,64 @@ input:checked + .slider:before {
 .mm-developers__anchor a:hover {
     color: rgb(3, 125, 214);
 }
+
+.mm-developers__text p {
+    font-weight: lighter;
+}
+
+/* SHOP SECTION */
+
+.mm-shop-container {
+    background-color: var(--mm-color-background-shop);
+}
+
+.mm-shop {
+    display: flex;
+    flex-direction: row;
+}
+
+.mm-shop__image {
+    width: calc(50%);
+    display: flex;
+    justify-content: right;
+}
+.mm-shop__image img {
+    width: 50%;
+}
+
+.mm-shop__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mm-shop__text a {
+    color: var(--mm-color-typography-body);
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: center;
+    transition: all 300ms ease 0s;
+    min-height: 52px;
+    max-width: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.mm-shop__text a {
+    margin-top: 40px;
+}
+
+.mm-shop__text a:hover {
+    border-color: rgb(21, 101, 192);
+    color: rgb(21, 101, 192);
+}
+
 
 @media screen and (max-width: 550px) {
 
@@ -563,6 +621,34 @@ input:checked + .slider:before {
         text-align: center;
         padding: 0;
     }
+    
+    /* SHOP SECTION */
+
+    .mm-shop {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mm-shop__image {
+        width: calc(100%);
+        display: flex;
+        justify-content: center;
+    }
+    .mm-shop__image img {
+        width: 75%;
+    }
+    
+    .mm-shop__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mm-shop__text h2 {
+        font-size: var(--mm-typography-hero-title-moibile);
+    }
+
 
 }
 
