@@ -26,7 +26,7 @@
   --mm-color-background-developers : var(--mm-color-n-930);
   --mm-color-background-shop : var(--mm-color-n-900);
   --mm-color-background-newsletter : var(--mm-color-n-1000);
-  --mm-color-background-fotter : var(--mm-color-n-920);
+  --mm-color-background-footer : var(--mm-color-n-920);
   
   /* BUTTON COLOR */
   --mm-color-background-switch: var(--mm-color-brand);
@@ -35,6 +35,7 @@
   /* TYPOGRAPHY COLOR */
 
   --mm-color-typography-body: var(--mm-color-n-000);
+  --mm-color-typography-footer: var(--mm-color-n-300);
 
   --mm-typography-typeface: 'Euclid Circular B', sans-serif;
 
@@ -75,6 +76,11 @@ body {
 header, main, footer {
     padding: auto;
     margin: auto;
+    
+}
+
+footer {
+    background-color: var(--mm-color-background-footer);
     
 }
 
@@ -478,6 +484,66 @@ input:checked + .slider:before {
     opacity: .9;
 }
 
+/* FOOTER */
+
+.mm-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px 30px;
+}
+
+.mm-footer__image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mm-footer__image img{
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.mm-footer__image span {
+    font-size: 22px;
+    letter-spacing: 0.15em;
+}
+
+.mm-footer__wrapper-list h5 {
+    color: var(--mm-color-typography-footer);
+    text-transform: uppercase;
+    line-height: 40px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.mm-footer__wrapper-list ul{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mm-footer__wrapper-list ul li {
+    padding: 5px;
+}
+
+.mm-footer__wrapper-list ul li a{
+    color: var(--mm-color-typography-body);
+    text-decoration: none; 
+    font-size: 12px;
+}
+
+.mm-footer__wrapper-list ul li a:hover {
+    color: var(--mm-color-background-button);
+}
+
+
+
 @media screen and (max-width: 550px) {
 
     /* APP SECTION */
@@ -560,6 +626,12 @@ input:checked + .slider:before {
     .mm-content-wrapper:nth-child(even) .mm-content-wrapper__text {
         padding-right: 0;
         padding-left: 40px;
+    }
+
+    .mm-footer__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -672,6 +744,7 @@ input:checked + .slider:before {
         display: flex;
         justify-content: center;
     }
+
     .mm-shop__image img {
         width: 75%;
     }
