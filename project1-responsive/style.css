@@ -319,7 +319,7 @@ input:checked + .slider:before {
 } 
 
 .mm-setion-video__video {
-    
+
 } 
 
 .mm-setion-video__video iframe {
@@ -441,7 +441,6 @@ input:checked + .slider:before {
         padding-right: 0;
         padding-left: 40px;
     }
-
 }
 
 @media screen and (max-width: 992px) {
@@ -461,6 +460,10 @@ input:checked + .slider:before {
 
      /* HERO SECTION */
 
+    .mm-hero {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
      .mm-hero__content {
         align-items: center;
      }
@@ -498,6 +501,12 @@ input:checked + .slider:before {
         text-align: center;
         padding: 0;
     }
+
+    /* .mm-content-wrapper__image {    
+        margin: 0px auto;
+        width: auto;
+        height: auto;
+    } */
 
     /* 3D SECTION */
 
