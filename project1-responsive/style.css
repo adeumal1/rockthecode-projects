@@ -274,11 +274,15 @@ input:checked + .slider:before {
 }
 
 .mm-content-wrapper__text:nth-child(odd) {
-    padding-right: 40px;
+    /* padding-right: 40px; */
 }
+
 .mm-content-wrapper__image {    
     display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
 .mm-content-wrapper__image img {    
     width: auto;
     height: auto;
