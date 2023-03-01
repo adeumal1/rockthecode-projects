@@ -108,6 +108,13 @@ header {
     justify-content: space-between;
 }
 
+.mm__hamburguer__label {
+    position: absolute;
+    right: 0;
+    top:0;
+    margin: 30px;
+}
+
 .mm-navbar__image {
     display: flex;
 }
@@ -127,10 +134,14 @@ header {
 .mm-navbar__menu {
     display: flex;
     padding-top: 13px;
+    justify-content: space-between;
 }
 
-.mm-menu__item {
-    display: none;
+.mm-section-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /* switch */
@@ -634,19 +645,16 @@ input:checked + .slider:before {
     }
     
    /* NAVBAR */
-    .mm-menu__item {
-        display: inline-block;
-    }
-
-    .mm-menu__hamburger {
-        display: none;
-    }
 
     .mm-menu__button a {
         background-color: var(--mm-color-background-button);
         cursor: pointer;
         padding: 8px 32px;
         border-radius: 999px;
+    }
+
+    .mm__hamburguer__label{
+        display: none;
     }
 
     .mm-menu__button a:hover {
@@ -703,13 +711,41 @@ input:checked + .slider:before {
     }
 
     /* NAVBAR */
-    
-    .mm-menu__button {
+    .mm-navbar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mm-section-nav {
         display: none;
     }
 
-    .mm-menu__toggle {
+    input[type=checkbox].mm__hamburguer:checked + .mm-section-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .mm-menu__item-dropdown {
+        margin-top: 15px;
+        box-shadow: none;
+        position: relative;
         display: none;
+    }
+    
+    .mm-menu__item-text:hover + .mm-menu__item-dropdown,
+    .mm-menu__item-dropdown:hover { 
+        display: none;
+    }
+
+    .mm-menu__button {
+        background-color: var(--mm-color-background-button);
+        cursor: pointer;
+        padding: 8px 40%;
+        border-radius: 999px;
     }
 
      /* HERO SECTION */
@@ -718,9 +754,11 @@ input:checked + .slider:before {
         padding-left: 10px;
         padding-right: 10px;
     }
-     .mm-hero__content {
+
+    .mm-hero__content {
         align-items: center;
-     }
+    }
+
     .mm-hero__content h1:first-child {
         text-align: center;
         font-size: var(--mm-typography-hero-title-moibile);
